@@ -47,72 +47,52 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 switch ($units) {
     case 'celsius':
-      // Convert to Fahrenheit
       $convertedTemperature = ($temperature * 9/5) + 32;
-      echo "Fahrenheit: " . $convertedTemperature . " °F<br>";
-      // Convert to Kelvin
+      echo "Fahrenheit: " . $convertedTemperature . " °F<br>"; 
       $convertedTemperature = $temperature + 273.15;
-      echo "Kelvin: " . $convertedTemperature . " K<br>";
-      // Convert to Reamur
+      echo "Kelvin: " . $convertedTemperature . " K<br>"; 
       $convertedTemperature = $temperature * 4/5;
-      echo "Reamur: " . $convertedTemperature . " °R<br>";
-      // Convert to Rankine
+      echo "Reamur: " . $convertedTemperature . " °R<br>"; 
       $convertedTemperature = ($temperature + 273.15) * 9/5;
       echo "Rankine: " . $convertedTemperature . " °Ra<br>";
       break;
-    case 'fahrenheit':
-      // Convert to Celsius
+    case 'fahrenheit': 
       $convertedTemperature = ($temperature - 32) * 5/9;
-      echo "Celsius: " . $convertedTemperature . " °C<br>";
-      // Convert to Kelvin
+      echo "Celsius: " . $convertedTemperature . " °C<br>"; 
       $convertedTemperature = ($temperature + 459.67) * 5/9;
-      echo "Kelvin: " . $convertedTemperature . " K<br>";
-      // Convert to Reamur
+      echo "Kelvin: " . $convertedTemperature . " K<br>"; 
       $convertedTemperature = ($temperature - 32) * 4/9;
-      echo "Reamur: " . $convertedTemperature . " °R<br>";
-      // Convert to Rankine
+      echo "Reamur: " . $convertedTemperature . " °R<br>"; 
       $convertedTemperature = $temperature + 459.67;
       echo "Rankine: " . $convertedTemperature . " °Ra<br>";
       break;
-   case 'kelvin':
-      // Convert to Celsius
+   case 'kelvin': 
       $convertedTemperature = $temperature - 273.15;
       echo "Celsius: " . $convertedTemperature . " °C<br>";
-      // Convert to Fahrenheit
       $convertedTemperature = ($temperature * 9/5) - 459.67;
-      echo "Fahrenheit: " . $convertedTemperature . " °F<br>";
-      // Convert to Reamur
+      echo "Fahrenheit: " . $convertedTemperature . " °F<br>"; 
       $convertedTemperature = ($temperature - 273.15) * 0.8;
       echo "Reamur: " . $convertedTemperature . " °R<br>";
-      // Convert to Rankine
       $convertedTemperature = $temperature * 9/5;
       echo "Rankine: " . $convertedTemperature . " °Ra<br>";
       break;
-   case 'reamur':
-      // Convert to Celsius
+   case 'reamur': 
       $convertedTemperature = $temperature / 0.8;
       echo "Celsius: " . $convertedTemperature . " °C<br>";
-      // Convert to Fahrenheit
       $convertedTemperature = ($temperature * 2.25) + 32;
       echo "Fahrenheit: " . $convertedTemperature . " °F<br>";
-      // Convert to Kelvin
       $convertedTemperature = ($temperature / 0.8) + 273.15;
-      echo "Kelvin: " . $convertedTemperature . " K<br>";
-      // Convert to Rankine
+      echo "Kelvin: " . $convertedTemperature . " K<br>"; 
       $convertedTemperature = ($temperature * 2.25) + 491.67;
       echo "Rankine: " . $convertedTemperature . " °Ra<br>";
       break;
-   case 'rankine':
-      // Convert to Celsius
+   case 'rankine': 
       $convertedTemperature = ($temperature - 491.67) * 5/9;
       echo "Celsius: " . $convertedTemperature . " °C<br>";
-      // Convert to Fahrenheit
       $convertedTemperature = $temperature - 459.67;
-      echo "Fahrenheit: " . $convertedTemperature . " °F<br>";
-      // Convert to Kelvin
+      echo "Fahrenheit: " . $convertedTemperature . " °F<br>"; 
       $convertedTemperature = $temperature * 5/9;
-      echo "Kelvin: " . $convertedTemperature . " K<br>";
-      // Convert to Reamur
+      echo "Kelvin: " . $convertedTemperature . " K<br>"; 
       $convertedTemperature = (($temperature / 1.8) - 273.15) * 0.8;
       echo "Reamur: " . $convertedTemperature . " °R<br>";
       break;
